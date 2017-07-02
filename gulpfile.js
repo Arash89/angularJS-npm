@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var rename = require('gulp-rename');
 var sass = require("gulp-sass");
+var jasmineBrowser = require('gulp-jasmine-browser');
+var watch = require('gulp-watch');
+
 
 gulp.task('sass', function(){
 	return gulp.src('css/*.scss')
@@ -24,5 +27,17 @@ gulp.task('webserver', function(){
 	}));
 });
 
+gulp.task('jasmine', function() {
+  var filesForTest = ['jasmine.js'];
+  return gulp.src(filesForTest)
+    .pipe(watch(filesForTest))
+    .pipe(jasmineBrowser.specRunner())
+    .pipe(jasmineBrowser.server({port: 8888}));
+});
+
 // gulp.task('default', ['sass', 'watch', 'webserver']);
- gulp.task('default', ['webserver']);
+ gulp.task('default', ['jasmine']);
+
+
+
+
