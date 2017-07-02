@@ -1,0 +1,19 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Try for working with angularJS through the npm modules",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arash89/angularJS-npm.git"
+  },
+  "author": "Arash Shoar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arash89/angularJS-npm/issues"
+  },
+  "homepage": "https://github.com/Arash89/angularJS-npm#readme"
+}
